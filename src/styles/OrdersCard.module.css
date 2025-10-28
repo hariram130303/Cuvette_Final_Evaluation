@@ -1,0 +1,211 @@
+/* --- Main Card Container --- */
+.orderCard {
+  border-radius: 20px;
+  padding: 20px;
+  width: 320px;
+  height: 450px;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* HEADER SECTION */
+.cardHeader {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+/* LEFT SIDE (icon + info) */
+.leftInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  color: #2563eb;
+}
+
+.orderId {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}
+
+.table,
+.time {
+  font-size: 10px;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.2;
+}
+
+.itemsCount {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  margin-top: 3px;
+}
+
+/* --- STATUS BOX --- */
+.statusBox {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 110px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.statusTitle {
+  color:#ff9a03;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Status Title Color Variants */
+.statusTitleProcessing {
+  color: #b45309; /* deep orange tone for Dine In */
+}
+
+.statusTitleDone {
+  color: #15803d; /* green tone for Done */
+}
+
+.statusTitleTakeaway {
+  color: #334155; /* blue-gray tone for Take Away */
+}
+
+
+.statusSub {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+/* --- CARD COLOR VARIANTS --- */
+.processing {
+  background-color: #ffe8c5;
+}
+
+.done {
+  background-color: #c3e8cc;
+}
+
+.takeaway {
+  background-color: #e4e9f0;
+}
+
+/* --- STATUS BOX COLOR MATCH --- */
+.processingBox {
+  background-color: #ffe8c5;
+  color: #7a4700;
+}
+
+.doneBox {
+  background-color: #bbeac7;
+  color: #147314;
+}
+
+.takeawayBox {
+  background-color: #b5c6cf;
+  color: #24353e;
+}
+
+/* --- ITEMS SECTION --- */
+/* --- Order Items Box --- */
+.itemsSection {
+  height: 210px;
+  background: white;
+  border-radius: 16px;
+  padding: 6px 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+.setTitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+/* Style the item list */
+.itemsSection ul {
+  list-style: none;
+  padding: 16px 25px;
+  margin: 0;
+}
+
+.itemsSection li {
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 25px;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* Add the “1×” prefix before each line */
+.itemsSection li::before {
+  content: "1× ";
+  position: absolute;
+  left: 0;
+  font-weight: 500;
+  color: #111;
+}
+
+/* --- FOOTER BUTTON --- */
+.footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.processingBtn {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.doneBtn {
+  background-color: #22c55e;
+  color: white;
+}
+
+
+
+.takeawayBtn {
+  background-color: #64748b;
+  color: white;
+}

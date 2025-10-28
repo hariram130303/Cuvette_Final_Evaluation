@@ -1,0 +1,217 @@
+/* ========== WRAPPER (centers the page) ========== */
+.menuWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f3f5f3;
+  padding: 20px 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* ========== MENU CONTAINER ========== */
+.menuContainer {
+  background: #ffffff;
+  width: 380px;
+  min-height: 90vh;
+  border-radius: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  overflow-y: auto;
+  position: relative;
+  transition: filter 0.3s ease;
+  font-family: "Inter", sans-serif;
+}
+
+.blur {
+  filter: blur(5px);
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* ========== TEXT HEADINGS ========== */
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 12px 0 6px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+/* ========== SEARCH BAR ========== */
+.searchRow {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 6px;
+  border-radius: 12px;
+  border: 1px solid #e2e2e2;
+  background: #f8f8f8;
+  margin-bottom: 14px;
+}
+
+.search {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+/* ========== CATEGORY CHIPS ========== */
+.chipContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin: 14px 0;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 8px 0;
+  scroll-behavior: smooth;
+  flex: 1;
+}
+
+.chips::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  flex: 0 0 auto;
+  min-width: 72px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid #616161;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+}
+
+.active {
+  background: #616161;
+  color: #fff;
+  border: 1px solid #616161;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.chip span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.arrowBtn {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+  flex-shrink: 0;
+}
+
+.arrowBtn:hover {
+  background: #f3f3f3;
+}
+
+/* ========== FOOD GRID ========== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 10px;
+  justify-items: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* ========== NEXT BUTTON ========== */
+.nextBtn {
+  position: sticky;
+  bottom: 16px;
+  left: 190px;
+  width: 40%;
+  background: #505050;
+  color: #fefefe;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+.nextBtn:hover {
+  background: #000;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 480px) {
+  .menuContainer {
+    width: 92%;
+    border-radius: 18px;
+    padding: 16px;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+
+  .nextBtn {
+    font-size: 13px;
+    padding: 10px 0;
+  }
+}

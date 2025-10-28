@@ -1,0 +1,214 @@
+/* === PAGE WRAPPER === */
+.pageWrap {
+  padding: 10px;
+  background: #f7fbfb;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 100%;
+  width: 100%;
+  
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === GRID CONTAINER === */
+.gridWrap {
+  width: 100%;
+  max-width: 1200px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 1px 8px rgba(16, 24, 40, 0.08);
+  box-sizing: border-box;
+}
+
+/* Title inside grid box */
+.title {
+  font-size: 22px;
+  color: #2b2b2b;
+  font-size: 44px;
+  font-weight: 600;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+/* === GRID === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 18px;
+  justify-items: center;
+  overflow-y: visible; /* remove inner scrollbar */
+}
+
+/* === TABLE CARD === */
+.tableCard {
+  background: #eef4f3;
+  border-radius: 8px;
+  height: 100px;
+  width: 120px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: default;
+  z-index: 1;
+  border: 2px solid #BABABA;
+}
+
+/* Delete Button */
+.deleteBtn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: transparent;
+  border: none;
+  padding: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #333;
+  transition: background 0.15s ease;
+}
+.deleteBtn:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Label and Number */
+.tableLabel {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.tableNumber {
+  font-size: 30px;
+  font-weight: 600;
+  color: #0e0e0e;
+  margin-bottom: 8px;
+}
+
+/* Footer (chairs info) */
+.tableFooter {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.chairIcon svg {
+  stroke-width: 1.8;
+}
+
+/* Add Card */
+.addCard {
+  border: 3px dashed rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  height: 100px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.plus {
+  font-size: 28px;
+  color: #4b5563;
+}
+
+/* === MODAL === */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.36);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.modal {
+  width: 300px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 12px 40px rgba(2, 6, 23, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modalLabel {
+  font-size: 13px;
+  color: #444;
+}
+
+.modalInput,
+.modalSelect {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6eef0;
+  background: #fbfeff;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.createBtn {
+  background: #111827;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.cancelBtn {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tableCard,
+  .addCard {
+    height: 110px;
+    width: 110px;
+  }
+}

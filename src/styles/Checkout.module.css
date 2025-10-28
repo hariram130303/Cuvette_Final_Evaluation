@@ -1,0 +1,340 @@
+  /* Checkout Container.css */
+  .checkoutContainer {
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px;
+  max-width: 390px;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  height: 100vh;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  
+}
+
+.searchRow {
+  display: flex;
+  padding: 8px 0;
+  height: 50px;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background-color: #F0F5F3;
+}
+
+.search {
+  flex: 1;
+  border: none;
+  outline: none;
+  color: #6B6B6B;
+  background: transparent;
+  font-size: 16px;
+}
+
+.cartCard {
+  margin-top: 12px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.itemRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.itemRow img {
+  width: 140px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 10px;
+  background-color: #D9D9D9;
+  padding: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e5e5;
+
+}
+
+.itemInfo {
+  flex: 1;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h4
+{
+  font-size: 16px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+p
+{
+  font-size: 12px;
+  color: #000;
+  font-weight: 500;
+}
+.removeBtn {
+  background-color: #e74c3c;   
+  color: white;                
+  border: none;
+  border-radius: 50%;           
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  left: 10px;
+  top: -8px;  
+}
+
+.removeBtn:hover {
+  background-color: #c0392b;
+}
+.removeBtn svg {
+  transform: scale(0.8);
+}
+
+.qtyControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  right: -100px;
+  top: -10px;
+  margin-top: 4px;
+}
+
+.qtyControls button {
+  border: 1px solid var(--border);
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.qtyControls span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 10px;
+  resize: none;
+  font-size: 14px;
+}
+
+.typeSwitch {
+  display: flex;
+  position: relative;
+  width: 320px;
+  height: 56px;
+  background: #e9e9e9;
+  border-radius: 28px;
+  margin: 20px auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease;
+}
+
+.typeSwitch button {
+  flex: 1;
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  color: #666;
+  z-index: 2;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.typeSwitch button.active {
+  color: #000;
+}
+
+.typeSwitch::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: calc(50% - 6px);
+  height: calc(100% - 12px);
+  background: #fff;
+  border-radius: 24px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.typeSwitch.takeaway::before {
+  transform: translateX(100%);
+}
+
+
+.billSection {
+  background: #fffacc;
+  margin-top: 12px;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding: 10px 16px;
+  border-radius: 0;
+  border-bottom: 3px solid #e0e0e0;
+  box-sizing: border-box;
+}
+
+.billRow,
+.billRowGrand {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.billRow
+{
+  color: #817070;
+}
+
+.billRowGrand {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.deliveryInfo {
+  font-size: 14px;
+}
+
+.details{
+  margin-left: -16px;
+  margin-right: -16px;
+  padding: 10px 16px;
+  border-bottom: 3px solid #e0e0e0;
+}
+
+.details h4 {
+  margin: 4px 0 0 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.details p {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 4px 0 0 0;
+  padding: 0;
+  color: #555;  
+}
+
+.infoRow {
+  margin-left: -16px;
+  margin-right: -16px;
+  padding: 10px 16px;
+  border-bottom: 3px solid #e0e0e0;
+}
+
+/* Add these new rules below */
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.infoItem svg {
+  color: #4AB425;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.infoItem span {
+  font-size: 10px;
+  font-weight: 1500;
+  line-height: 2;
+  color: #222;
+  font-weight: 500;
+}
+
+.swipeButton {
+  margin-top: 16px;
+  width: 100%;
+  padding: 12px 0;
+  background: var(--accent);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.swipeButton:hover {
+  background: var(--accent-dark);
+}
+
+.swipeContainer {
+  position: relative;
+  width: 300px;
+  height: 70px;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 40px;
+  margin: 24px auto 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.swipeText {
+  color: #8c8c8c;
+  font-size: 14px;
+  font-weight: 500;
+  pointer-events: none;
+  position: absolute;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.swipeDragger {
+  position: absolute;
+  left: 7px;
+  width: 60px;
+  height: 60px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  cursor: grab;
+}
+
+
